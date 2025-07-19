@@ -131,8 +131,8 @@ export const usePuterStore = create<PuterStore>((set, get) => {
                 const user = await puter.auth.getUser();
                 set({
                     auth: {
-                        user,
                         isAuthenticated: true,
+                        user,
                         signIn: get().auth.signIn,
                         signOut: get().auth.signOut,
                         refreshUser: get().auth.refreshUser,
